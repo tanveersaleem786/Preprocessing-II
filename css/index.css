@@ -217,6 +217,16 @@ img {
   width: 30%;
   margin-bottom: 30px;
 }
+.home .content-pick .destination .btn {
+  background-color: #17A2B8;
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  height: 40px;
+}
 header {
   display: flex;
   justify-content: space-between;
