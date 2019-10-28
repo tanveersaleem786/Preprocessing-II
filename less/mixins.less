@@ -18,3 +18,45 @@
       
 
 }
+
+.text-animation(@start-pos,@end-pos) {
+    
+
+        position: relative;
+        -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+        animation: mymove 5s infinite;
+
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-timing-function: linear;
+
+
+        /* Standard syntax */
+        animation-timing-function: linear;
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes mymove {
+        from {left: @start-pos;}
+        to {left: @end-pos;}
+        }
+
+        /* Standard syntax */
+        @keyframes mymove {
+        from {left: @start-pos;}
+        to {left: @end-pos;}
+        }
+
+        @media @mobile {      
+             /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes mymove {
+            from {top: @start-pos;}
+            to {top: @end-pos;}
+            }
+    
+            /* Standard syntax */
+            @keyframes mymove {
+            from {top: @start-pos;}
+            to {top: @end-pos;}
+            }            
+        }
+    
+}

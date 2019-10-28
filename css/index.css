@@ -179,6 +179,56 @@ header {
   margin-top: 4%;
   margin-bottom: 4%;
 }
+header .pg-title {
+  position: relative;
+  -webkit-animation: mymove 5s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: linear;
+  /* Standard syntax */
+  animation-timing-function: linear;
+  /* Safari 4.0 - 8.0 */
+  /* Standard syntax */
+}
+@-webkit-keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 280px;
+  }
+}
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 280px;
+  }
+}
+@media (max-width: 500px) {
+  header .pg-title {
+    /* Safari 4.0 - 8.0 */
+    /* Standard syntax */
+  }
+  @-webkit-keyframes mymove {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 280px;
+    }
+  }
+  @keyframes mymove {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 280px;
+    }
+  }
+}
 @media (max-width: 500px) {
   header {
     flex-direction: column;
