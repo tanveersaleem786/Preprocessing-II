@@ -1,21 +1,59 @@
 .home {
 
-  .content-section {
+  .header-image {    
+    border-top: 2px dashed @navigation-border;
+    @media @mobile {
+      max-width: 86%;         
+      margin-left: 8%;   
+    }
+  }
+  
+  
+  .text-content-into {
+      display: none;      
+      
+      @media @mobile {   
+        max-width: 86%;          
+        display: block;
+        border-bottom: 2px dashed @navigation-border;  
+        margin-left: 8%;  
+        padding-top: 5%;
+        padding-bottom: 5%;       
+      }
+
+  }
+
+  .content-section {    
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;   
+      padding-left: 8%;             
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 90%;   
+        padding-left: 1.5%;                
+      }
+
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 100%;   
+        padding-left: 1%;            
+      }
 
       img {
         border-radius: 10px;
@@ -27,14 +65,35 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;  
+      width: 92%;  
+      padding-left: 0;
+      margin-left: 7%;      
+      width: 83%;
+                     
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {                        
+        width: 96%;  
+      }
+
+      
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {                        
+        width: 100%;  
+        padding-right: 0;
+      }
     }
   }
 
@@ -42,9 +101,15 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {      
+      width: 86%;                  
+    }
+    
+
     img {
       border-radius: 10px;
     }
+    
   }
 
   .content-pick {
@@ -52,10 +117,28 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    
+
+    @media @mobile {      
+      flex-direction: column;       
+      margin-left: 8%;  
+      width: 85%;         
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {      
+        width: 85%;   
+        margin-left: 6%;               
+      }
+      
+      .btn {        
+        .btn-create(@eastern-blue,@white);    
+      }
     }
+    
+    
   }
 }// home
